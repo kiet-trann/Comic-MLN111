@@ -48,6 +48,71 @@
       };
     </script>
     <style>
+        /* Timeline navigation styling */
+        .timeline-nav {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        }
+
+        .timeline-nav a {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid #8b4513;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+        }
+
+        .timeline-nav a:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: scale(1.2);
+        }
+
+        .timeline-nav a.active {
+        background-color: #8b4513;
+        transform: scale(1.2);
+        }
+
+        .timeline-nav a::after {
+        content: attr(title);
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-size: 14px;
+        color: #3a3a3a;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        }
+
+        .timeline-nav a:hover::after {
+        opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+        .timeline-nav {
+            right: 10px;
+        }
+        
+        .timeline-nav a {
+            width: 12px;
+            height: 12px;
+        }
+        }
       /* Base styles - keeping existing styles */
       /* ...existing code... */
 
@@ -154,92 +219,18 @@
       </button>
     </div>
 
-    <!-- Sound Toggle Button -->
-    <div class="sound-toggle" id="soundToggle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="sound-on"
-      >
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-      </svg>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="sound-off hidden"
-      >
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-        <line x1="23" y1="9" x2="17" y2="15"></line>
-        <line x1="17" y1="9" x2="23" y2="15"></line>
-      </svg>
-    </div>
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle" id="themeToggle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="theme-light"
-      >
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="theme-dark hidden"
-      >
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-    </div>
 
     <!-- Timeline Navigation -->
     <div class="timeline-nav">
-      <a href="#page1" class="active" title="Trang 1"></a>
-      <a href="#page2" title="Trang 2"></a>
-      <a href="#page3" title="Trang 3"></a>
-      <a href="#page4" title="Trang 4"></a>
-      <a href="#page5" title="Trang 5"></a>
-      <a href="#page6" title="Trang 6"></a>
-      <a href="#page7" title="Trang 7"></a>
-      <a href="#page8" title="Trang 8"></a>
+    <a href="#page1" class="active" title="Giới thiệu"></a>
+    <a href="#page2" title="Cá thể sinh học và Xã hội"></a>
+    <a href="#page3" title="Ví dụ về sự cô lập xã hội"></a>
+    <a href="#page4" title="Quan hệ mang tính lịch sử"></a>
+    <a href="#page5" title="Các tầng bản sắc con người"></a>
+    <a href="#page6" title="Mâu thuẫn bản sắc"></a>
+    <a href="#page7" title="Tính nhân loại là vĩnh viễn"></a>
+    <a href="#page8" title="Hài hòa cá nhân - xã hội"></a>
     </div>
 
     <!-- Main Content -->
