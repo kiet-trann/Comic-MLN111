@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journey Through Time: A Comic History</title>
+    <title>Mối Quan Hệ Giữa Cá Nhân và Xã Hội</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&family=Quicksand:wght@400;700&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        'comic': ['"Comic Neue"', 'cursive'],
+                        'comic': ['Patrick Hand', 'cursive'],
                         'title': ['Bangers', 'cursive'],
-                        'marker': ['"Permanent Marker"', 'cursive'],
+                        'viet': ['Quicksand', 'sans-serif'],
                     },
                     colors: {
-                        'parchment': '#f5e8c0',
-                        'parchment-dark': '#e0d0a0',
+                        'paper': '#f8f0d7',
+                        'paper-dark': '#e5d9b6',
                         'ink': '#3a3a3a',
-                        'accent': '#8b4513',
+                        'accent': '#d35400',
+                        'accent-dark': '#a04000',
                     },
                     animation: {
                         'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s ease-in-out infinite',
                     },
                     keyframes: {
                         float: {
@@ -37,9 +42,10 @@
     <style>
         /* Base styles */
         body {
-            background-color: #f5e8c0;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e0d0a0' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-color: #f8f0d7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e5d9b6' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
             scroll-behavior: smooth;
+            font-family: 'Quicksand', sans-serif;
         }
 
         section {
@@ -51,13 +57,13 @@
         .comic-panel {
             position: relative;
             border: 8px solid #000;
-            box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        
+
         .comic-panel.visible {
             opacity: 1;
             transform: translateY(0);
@@ -112,8 +118,8 @@
             padding: 15px;
             background-color: #f9e076;
             border: 3px solid black;
-            box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
-            font-family: 'Comic Neue', cursive;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+            font-family: 'Patrick Hand', cursive;
             font-weight: 700;
             opacity: 0;
             transform: translateY(20px);
@@ -125,6 +131,25 @@
             transform: translateY(0);
         }
 
+        .quote-box {
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: 3px solid white;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease 0.3s;
+        }
+
+        .quote-box.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         /* Scroll snapping container */
         .scroll-container {
             scroll-snap-type: y mandatory;
@@ -132,8 +157,8 @@
             height: 100vh;
         }
 
-        /* Timeline navigation */
-        .timeline-nav {
+        /* Chapter navigation */
+        .chapter-nav {
             position: fixed;
             right: 20px;
             top: 50%;
@@ -141,18 +166,18 @@
             z-index: 100;
         }
 
-        .timeline-nav a {
+        .chapter-nav a {
             display: block;
             width: 15px;
             height: 15px;
             margin: 15px 0;
             border-radius: 50%;
-            background-color: rgba(0,0,0,0.3);
+            background-color: rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
 
-        .timeline-nav a.active {
-            background-color: #8b4513;
+        .chapter-nav a.active {
+            background-color: #d35400;
             transform: scale(1.3);
         }
 
@@ -189,15 +214,20 @@
 
         /* Landing animation */
         @keyframes titleReveal {
-            0% { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
-            100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            0% {
+                clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            }
+
+            100% {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
         }
 
         .title-reveal {
             animation: titleReveal 1.5s ease forwards;
         }
 
-        /* Page divider */
+        /* Chapter divider */
         .divider {
             height: 30px;
             background-image: repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%);
@@ -213,7 +243,7 @@
             z-index: 100;
             width: 40px;
             height: 40px;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -225,9 +255,9 @@
 
         .sound-toggle:hover {
             transform: scale(1.1);
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         /* Dark mode toggle */
         .theme-toggle {
             position: fixed;
@@ -236,7 +266,7 @@
             z-index: 100;
             width: 40px;
             height: 40px;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -248,28 +278,36 @@
 
         .theme-toggle:hover {
             transform: scale(1.1);
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
+
 <body>
     <!-- Landing Screen -->
-    <div id="landing" class="fixed inset-0 bg-parchment flex flex-col items-center justify-center z-50">
-        <h1 class="font-title text-6xl md:text-8xl text-accent mb-6 title-reveal text-center px-4">JOURNEY THROUGH TIME</h1>
-        <p class="font-comic text-xl md:text-2xl text-ink mb-8 max-w-md text-center px-4">A Comic Book Adventure Through History</p>
-        <button id="startBtn" class="font-marker bg-accent text-white px-6 py-3 rounded-lg text-xl transform hover:scale-105 transition-transform duration-300 animate-float">
-            BEGIN THE JOURNEY
+    <div id="landing" class="fixed inset-0 bg-paper flex flex-col items-center justify-center z-50">
+        <h1 class="font-title text-5xl md:text-7xl text-accent mb-6 title-reveal text-center px-4">MỐI QUAN HỆ GIỮA</h1>
+        <h2 class="font-title text-5xl md:text-7xl text-accent-dark mb-8 title-reveal text-center px-4"
+            style="animation-delay: 0.5s">CÁ NHÂN VÀ XÃ HỘI</h2>
+        <p class="font-viet text-xl md:text-2xl text-ink mb-10 max-w-md text-center px-4">Những khám phá triết học qua
+            hình thức truyện tranh</p>
+        <button id="startBtn"
+            class="font-viet font-bold bg-accent text-white px-8 py-4 rounded-lg text-xl transform hover:scale-105 transition-transform duration-300 animate-float">
+            BẮT ĐẦU TRUYỆN TRANH
         </button>
     </div>
 
     <!-- Sound Toggle Button -->
-    <div class="sound-toggle" id="soundToggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sound-on">
+    <div class="sound-toggle" id="soundToggle" title="Âm thanh">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sound-on">
             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
             <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
             <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sound-off hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="sound-off hidden">
             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
             <line x1="23" y1="9" x2="17" y2="15"></line>
             <line x1="17" y1="9" x2="23" y2="15"></line>
@@ -277,8 +315,9 @@
     </div>
 
     <!-- Theme Toggle Button -->
-    <div class="theme-toggle" id="themeToggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-light">
+    <div class="theme-toggle" id="themeToggle" title="Chế độ sáng/tối">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-light">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -289,257 +328,858 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-dark hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="theme-dark hidden">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
     </div>
 
-    <!-- Timeline Navigation -->
-    <div class="timeline-nav">
-        <a href="#ancient" class="active" title="Ancient Egypt"></a>
-        <a href="#roman" title="Roman Empire"></a>
-        <a href="#medieval" title="Medieval Times"></a>
-        <a href="#renaissance" title="Renaissance"></a>
-        <a href="#industrial" title="Industrial Revolution"></a>
+    <!-- Chapter Navigation -->
+    <div class="chapter-nav">
+        <a href="#chapter1" class="active" title="Cá nhân và xã hội là một chỉnh thể thống nhất"></a>
+        <a href="#chapter2" title="Quan hệ cá nhân - xã hội mang tính lịch sử"></a>
+        <a href="#chapter3" title="Con người mang nhiều tầng bản sắc"></a>
+        <a href="#chapter4" title="Mâu thuẫn giữa tính giai cấp và tính nhân loại"></a>
+        <a href="#chapter5" title="Tính nhân loại là vĩnh viễn"></a>
+        <a href="#chapter6" title="Ý nghĩa phương pháp luận"></a>
+        <a href="#conclusion" title="Kết luận"></a>
     </div>
 
     <!-- Main Content -->
     <div class="scroll-container">
-        <!-- Ancient Egypt Section -->
-        <section id="ancient" class="min-h-screen flex items-center justify-center p-4 md:p-10">
+        <!-- Chapter 1: Cá nhân và xã hội là một chỉnh thể thống nhất -->
+        <section id="chapter1" class="min-h-screen flex items-center justify-center p-4 md:p-10">
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="comic-panel bg-yellow-100 p-4 md:col-span-2 aspect-video md:aspect-auto flex items-center justify-center relative">
-                    <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/egypt/800/500')] bg-cover bg-center"></div>
-                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg">
-                        ANCIENT EGYPT - 3000 BCE. The mighty civilization rises along the Nile...
+                <div
+                    class="comic-panel bg-yellow-100 p-4 md:col-span-2 aspect-video md:aspect-auto flex items-center justify-center relative">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="800" height="450" fill="#f8e8cc" />
+                            <circle cx="250" cy="225" r="120" fill="#f5d5a8" stroke="#333" stroke-width="2" />
+                            <path
+                                d="M250,105 C300,105 350,165 350,225 C350,285 300,345 250,345 C200,345 150,285 150,225 C150,165 200,105 250,105 Z"
+                                fill="#fae7c9" stroke="#333" stroke-width="2" />
+                            <circle cx="250" cy="175" r="15" fill="#333" />
+                            <circle cx="250" cy="175" r="5" fill="#fff" />
+                            <path d="M230,225 C240,235 260,235 270,225" stroke="#333" stroke-width="3" fill="none" />
+                            <circle cx="550" cy="225" r="120" fill="#d5e8f5" stroke="#333" stroke-width="2" />
+                            <rect x="480" y="145" width="140" height="160" rx="10" fill="#e8f0f7" stroke="#333"
+                                stroke-width="2" />
+                            <circle cx="550" cy="175" r="15" fill="#333" />
+                            <circle cx="550" cy="175" r="5" fill="#fff" />
+                            <path d="M530,225 C540,235 560,235 570,225" stroke="#333" stroke-width="3" fill="none" />
+                            <path d="M370,225 C390,215 410,215 430,225" stroke="#333" stroke-width="4"
+                                stroke-dasharray="10,5" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg bg-opacity-90 bg-yellow-100">
+                        CHƯƠNG 1: CÁ NHÂN VÀ XÃ HỘI LÀ MỘT CHỈNH THỂ THỐNG NHẤT
                     </div>
                 </div>
-                
+
                 <div class="comic-panel bg-yellow-50 p-4 flex flex-col justify-center">
-                    <h2 class="font-marker text-3xl mb-4 text-center">THE PYRAMID AGE</h2>
+                    <h2 class="font-comic text-3xl mb-4 text-center text-accent-dark">Từ Sinh Học Đến Xã Hội</h2>
                     <div class="speech-bubble mt-4">
-                        <p class="font-comic text-lg">"Our great monuments will stand for eternity, telling the world of our glory!"</p>
-                        <p class="font-marker text-sm text-right mt-2">- Pharaoh Khufu</p>
+                        <p class="font-comic text-lg">"Con người sống trong xã hội cũng như cá sống trong nước. Không
+                            thể tách rời."</p>
+                        <p class="font-viet text-sm text-right mt-2">- Nhà triết học</p>
                     </div>
                 </div>
-                
+
                 <div class="comic-panel bg-yellow-50 p-4">
-                    <h3 class="font-marker text-2xl mb-2">DAILY LIFE</h3>
-                    <p class="font-comic">Workers toil under the scorching sun, hauling massive limestone blocks. Scribes record every detail. The Nile gives life to the entire kingdom.</p>
-                </div>
-                
-                <div class="comic-panel bg-yellow-100 p-4 md:col-span-2 aspect-square md:aspect-auto">
-                    <div class="speech-bubble">
-                        <p class="font-comic text-lg">"We have created a writing system unlike any other. Our hieroglyphs will carry our stories through the ages."</p>
+                    <h3 class="font-comic text-2xl mb-2 text-accent-dark">Quá Trình Phát Triển</h3>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12">
+                                    <circle cx="50" cy="50" r="40" fill="#f8d0b0" stroke="#333" stroke-width="2" />
+                                    <circle cx="40" cy="40" r="5" fill="#333" />
+                                    <circle cx="60" cy="40" r="5" fill="#333" />
+                                    <path d="M40,60 C45,65 55,65 60,60" stroke="#333" stroke-width="2" fill="none" />
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-viet">Từ đứa trẻ sơ sinh</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12">
+                                    <circle cx="50" cy="50" r="40" fill="#b0d0f8" stroke="#333" stroke-width="2" />
+                                    <circle cx="40" cy="40" r="5" fill="#333" />
+                                    <circle cx="60" cy="40" r="5" fill="#333" />
+                                    <path d="M40,60 C45,65 55,65 60,60" stroke="#333" stroke-width="2" fill="none" />
+                                    <path d="M30,30 L20,20 M70,30 L80,20" stroke="#333" stroke-width="2" fill="none" />
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-viet">Phát triển trong môi trường xã hội</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12">
+                                    <circle cx="50" cy="50" r="40" fill="#b0f8d0" stroke="#333" stroke-width="2" />
+                                    <circle cx="40" cy="40" r="5" fill="#333" />
+                                    <circle cx="60" cy="40" r="5" fill="#333" />
+                                    <path d="M40,60 C45,65 55,65 60,60" stroke="#333" stroke-width="2" fill="none" />
+                                    <rect x="20" y="20" width="60" height="15" rx="5" fill="#fff" stroke="#333"
+                                        stroke-width="1" />
+                                    <line x1="30" y1="27" x2="70" y2="27" stroke="#333" stroke-width="1" />
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-viet">Trở thành cá nhân trong xã hội</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f9e7c1'/%3E%3Cpath d='M30,50 a15,10 0 1,0 30,0 a15,10 0 1,0 -30,0 M80,50 l20,-15 v30 l-20,-15 M120,35 v30 M130,35 v30 M140,50 h20 M180,35 h20 v30 h-20 M220,35 v30 l20,-30 v30' stroke='%23773a21' stroke-width='3' fill='none'/%3E%3Cpath d='M30,100 h30 M30,110 h30 M30,120 h30 M80,100 l10,30 l10,-30 M120,100 v30 h20 M160,100 v30 M180,100 h20 v15 h-20 v15 h20' stroke='%23773a21' stroke-width='3' fill='none'/%3E%3Cpath d='M30,150 l15,30 l15,-30 M80,150 a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0 M130,150 v30 h20 M170,150 v30 M180,150 v30 M200,150 v30' stroke='%23773a21' stroke-width='3' fill='none'/%3E%3C/svg%3E" alt="Egyptian Hieroglyphs" class="mt-8 mx-auto">
+                </div>
+
+                <div class="comic-panel bg-yellow-100 p-4 md:col-span-3 relative">
+                    <div class="quote-box mx-auto max-w-2xl">
+                        <p class="font-viet text-xl md:text-2xl text-center">"Con người chỉ có thể trở thành cá nhân
+                            thực thụ khi sống trong xã hội."</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <div class="divider"></div>
-        
-        <!-- Roman Empire Section -->
-        <section id="roman" class="min-h-screen flex items-center justify-center p-4 md:p-10">
+
+        <!-- Chapter 2: Quan hệ cá nhân-xã hội mang tính lịch sử -->
+        <section id="chapter2" class="min-h-screen flex items-center justify-center p-4 md:p-10">
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="comic-panel bg-red-100 p-4 aspect-video md:aspect-auto flex items-center justify-center relative">
-                    <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/rome/800/500')] bg-cover bg-center"></div>
-                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg">
-                        THE ROMAN EMPIRE - 27 BCE. From a small city to ruler of the known world...
+                <div
+                    class="comic-panel bg-red-100 p-4 aspect-video md:aspect-auto flex items-center justify-center relative">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="800" height="450" fill="#f8d8cc" />
+                            <!-- Left side: Feudal Farmer -->
+                            <rect x="0" y="0" width="400" height="450" fill="#f5d5a8" />
+                            <path d="M150,150 C130,150 110,180 110,220 L190,220 C190,180 170,150 150,150 Z"
+                                fill="#d5bb95" stroke="#333" stroke-width="2" />
+                            <rect x="130" y="220" width="40" height="80" fill="#a87c5f" stroke="#333"
+                                stroke-width="2" />
+                            <path d="M110,220 L50,300 M190,220 L250,300" stroke="#333" stroke-width="2" fill="none" />
+                            <path d="M50,250 L150,200 L250,250" stroke="#333" stroke-width="3" stroke-linecap="round"
+                                fill="none" />
+                            <path d="M120,300 L180,300 L180,350 C180,380 120,380 120,350 Z" fill="#a87c5f" stroke="#333"
+                                stroke-width="2" />
+                            <circle cx="150" cy="120" r="40" fill="#f5d5a8" stroke="#333" stroke-width="2" />
+                            <circle cx="135" cy="110" r="5" fill="#333" />
+                            <circle cx="165" cy="110" r="5" fill="#333" />
+                            <path d="M135,135 C145,145 155,145 165,135" stroke="#333" stroke-width="2" fill="none" />
+                            <path d="M100,50 L200,50 L200,120 L100,120 Z" fill="#7a5c3f" stroke="#333"
+                                stroke-width="2" />
+                            <path
+                                d="M110,50 L110,120 M130,50 L130,120 M150,50 L150,120 M170,50 L170,120 M190,50 L190,120"
+                                stroke="#333" stroke-width="1" fill="none" />
+
+                            <!-- Right side: Modern Engineer -->
+                            <rect x="400" y="0" width="400" height="450" fill="#d5e8f5" />
+                            <path d="M650,150 C630,150 610,180 610,220 L690,220 C690,180 670,150 650,150 Z"
+                                fill="#f5d5a8" stroke="#333" stroke-width="2" />
+                            <rect x="630" y="220" width="40" height="80" fill="#4a7aaa" stroke="#333"
+                                stroke-width="2" />
+                            <path d="M610,220 L570,300 M690,220 L730,300" stroke="#333" stroke-width="2" fill="none" />
+                            <path d="M570,250 L650,230 L730,250" stroke="#333" stroke-width="3" stroke-linecap="round"
+                                fill="none" />
+                            <rect x="620" y="300" width="60" height="50" fill="#4a7aaa" stroke="#333"
+                                stroke-width="2" />
+                            <circle cx="650" cy="120" r="40" fill="#f5d5a8" stroke="#333" stroke-width="2" />
+                            <circle cx="635" cy="110" r="5" fill="#333" />
+                            <circle cx="665" cy="110" r="5" fill="#333" />
+                            <path d="M635,135 C645,145 655,145 665,135" stroke="#333" stroke-width="2" fill="none" />
+                            <path d="M610,90 L690,90 L690,110 L610,110 Z" fill="#f5f5f5" stroke="#333"
+                                stroke-width="2" />
+                            <line x1="650" y1="90" x2="650" y2="120" stroke="#333" stroke-width="1" />
+                            <circle cx="650" cy="95" r="3" fill="#333" />
+                            <path d="M625,25 L675,25 L675,90 L625,90 Z" fill="#f5f5f5" stroke="#333" stroke-width="2" />
+                            <path d="M635,40 L665,40 M635,60 L665,60 M635,80 L665,80" stroke="#333" stroke-width="1"
+                                fill="none" />
+                        </svg>
+                    </div>
+                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg bg-opacity-90 bg-red-100">
+                        CHƯƠNG 2: QUAN HỆ CÁ NHÂN - XÃ HỘI MANG TÍNH LỊCH SỬ
                     </div>
                 </div>
-                
+
                 <div class="comic-panel bg-red-50 p-4">
-                    <h2 class="font-marker text-3xl mb-4">GLORY OF ROME</h2>
+                    <h2 class="font-comic text-3xl mb-4 text-accent-dark">THỜI ĐẠI KHÁC NHAU</h2>
                     <div class="speech-bubble mt-4">
-                        <p class="font-comic text-lg">"I found Rome built of bricks; I leave her clothed in marble."</p>
-                        <p class="font-marker text-sm text-right mt-2">- Emperor Augustus</p>
+                        <p class="font-comic text-lg">"Vai trò của cá nhân biến đổi theo sự phát triển của xã hội. Mỗi
+                            thời đại đòi hỏi những phẩm chất khác nhau."</p>
+                        <p class="font-viet text-sm text-right mt-2">- Nhà sử học</p>
                     </div>
                 </div>
-                
-                <div class="comic-panel bg-red-50 p-4 md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                <div class="comic-panel bg-red-50 p-4 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <h3 class="font-marker text-xl mb-2">ENGINEERING</h3>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M20,120 L180,120 M30,120 C30,90 40,80 50,80 L150,80 C160,80 170,90 170,120 M40,120 C40,100 45,90 55,90 L145,90 C155,90 160,100 160,120 M50,120 C50,110 55,100 60,100 L140,100 C145,100 150,110 150,120 M60,120 C60,115 65,110 70,110 L130,110 C135,110 140,115 140,120 M60,60 L60,80 M80,40 L80,80 M100,30 L100,80 M120,40 L120,80 M140,60 L140,80 M90,30 L110,30 M70,40 L90,40 M110,40 L130,40 M50,60 L70,60 M130,60 L150,60' stroke='%23A52A2A' stroke-width='3' fill='none'/%3E%3C/svg%3E" alt="Roman Architecture" class="mt-2 mx-auto">
+                        <h3 class="font-comic text-xl mb-2 text-accent-dark">XÃ HỘI PHONG KIẾN</h3>
+                        <ul class="font-viet space-y-2 list-disc pl-5 mb-4">
+                            <li>Cá nhân gắn chặt với đẳng cấp, dòng tộc</li>
+                            <li>Tính cộng đồng làng xã mạnh mẽ</li>
+                            <li>Gắn bó với nghề nghiệp truyền thống</li>
+                            <li>Vai trò cá nhân bị giới hạn bởi thân phận</li>
+                        </ul>
+                        <div class="flex justify-center mt-4">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+                                <rect width="200" height="150" fill="#f8e8cc" />
+                                <path d="M50,130 L150,130 M80,60 L120,60 L120,130 L80,130 Z" stroke="#8b4513"
+                                    stroke-width="3" fill="#d2b48c" />
+                                <path d="M90,80 L110,80 M90,100 L110,100" stroke="#8b4513" stroke-width="2" />
+                                <path d="M60,60 L140,60 L120,40 L80,40 Z" fill="#8b4513" stroke="#8b4513"
+                                    stroke-width="2" />
+                                <path d="M75,130 L75,140 L125,140 L125,130" stroke="#8b4513" stroke-width="3"
+                                    fill="none" />
+                            </svg>
+                        </div>
                     </div>
                     <div>
-                        <h3 class="font-marker text-xl mb-2">LEGIONS</h3>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M60,40 L100,20 L140,40 L140,110 L100,130 L60,110 Z' stroke='%23A52A2A' stroke-width='3' fill='%23f1d7a4'/%3E%3Cpath d='M100,20 L100,130 M60,40 L140,40 M60,110 L140,110 M80,50 L80,100 M120,50 L120,100 M70,75 L130,75' stroke='%23A52A2A' stroke-width='3' fill='none'/%3E%3Ccircle cx='100' cy='75' r='15' stroke='%23A52A2A' stroke-width='3' fill='%23cd5c5c'/%3E%3C/svg%3E" alt="Roman Shield" class="mt-2 mx-auto">
-                    </div>
-                    <div>
-                        <h3 class="font-marker text-xl mb-2">LAW & ORDER</h3>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M100,30 L150,60 L100,90 L50,60 Z' stroke='%23A52A2A' stroke-width='3' fill='%23f1d7a4'/%3E%3Cpath d='M100,30 L100,90 M50,60 L150,60' stroke='%23A52A2A' stroke-width='3' fill='none'/%3E%3Cpath d='M60,120 L140,120 M70,110 L130,110 M100,90 L100,110' stroke='%23A52A2A' stroke-width='3' fill='none'/%3E%3C/svg%3E" alt="Roman Scales of Justice" class="mt-2 mx-auto">
+                        <h3 class="font-comic text-xl mb-2 text-accent-dark">XÃ HỘI HIỆN ĐẠI</h3>
+                        <ul class="font-viet space-y-2 list-disc pl-5 mb-4">
+                            <li>Cá nhân có nhiều tự do lựa chọn</li>
+                            <li>Chuyên môn hóa cao, đa dạng nghề nghiệp</li>
+                            <li>Khả năng di động xã hội lớn hơn</li>
+                            <li>Giá trị cá nhân được đề cao</li>
+                        </ul>
+                        <div class="flex justify-center mt-4">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+                                <rect width="200" height="150" fill="#e8f0f7" />
+                                <rect x="60" y="40" width="80" height="100" fill="#c0d0e0" stroke="#444"
+                                    stroke-width="2" />
+                                <path d="M60,60 L140,60 M60,80 L140,80 M60,100 L140,100 M60,120 L140,120" stroke="#444"
+                                    stroke-width="1" />
+                                <rect x="90" y="40" width="20" height="100" fill="#b0c0d0" stroke="#444"
+                                    stroke-width="1" />
+                                <path d="M70,40 L70,140 M110,40 L110,140 M130,40 L130,140" stroke="#444"
+                                    stroke-width="1" />
+                                <circle cx="100" cy="20" r="10" fill="#e74c3c" stroke="#444" stroke-width="1" />
+                                <path d="M95,140 L95,145 L105,145 L105,140" stroke="#444" stroke-width="2"
+                                    fill="none" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="comic-panel bg-red-50 p-4">
-                    <div class="speech-bubble">
-                        <p class="font-comic text-lg">"All roads lead to Rome, and with them, our culture and laws spread throughout the empire."</p>
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-red-100 p-4 relative">
-                    <div class="narrator-box text-lg">
-                        The empire's influence would stretch from Britain to Egypt, bringing Latin, roads, and aqueducts to three continents...
+
+                <div class="comic-panel bg-red-100 p-4 md:col-span-2">
+                    <div class="quote-box mx-auto max-w-2xl">
+                        <p class="font-viet text-xl md:text-2xl text-center">"Vai trò xã hội của mỗi cá nhân thay đổi
+                            theo thời đại."</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <div class="divider"></div>
-        
-        <!-- Medieval Times Section -->
-        <section id="medieval" class="min-h-screen flex items-center justify-center p-4 md:p-10">
+
+        <!-- Chapter 3: Con người mang nhiều tầng bản sắc -->
+        <section id="chapter3" class="min-h-screen flex items-center justify-center p-4 md:p-10">
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
-                <div class="comic-panel bg-stone-100 p-4 md:col-span-7 aspect-video md:aspect-auto flex items-center justify-center relative">
-                    <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/medieval/800/500')] bg-cover bg-center"></div>
-                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg">
-                        THE MIDDLE AGES - 1200 CE. Lords and ladies, knights and peasants...
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-stone-50 p-4 md:col-span-5">
-                    <h2 class="font-marker text-3xl mb-4">FEUDAL SOCIETY</h2>
-                    <div class="speech-bubble mt-4">
-                        <p class="font-comic text-lg">"The Church, the nobility, and the peasantry - each has their place in God's grand design."</p>
-                        <p class="font-marker text-sm text-right mt-2">- A Monastic Scholar</p>
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-stone-50 p-4 md:col-span-4">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f8f0e5'/%3E%3Cpath d='M100,20 L130,70 L90,140 L100,150 L110,140 L70,70 Z' stroke='%23333' stroke-width='3' fill='%23aaa'/%3E%3Cpath d='M100,150 L100,180 M90,160 L110,160' stroke='%23333' stroke-width='3' fill='none'/%3E%3Ccircle cx='100' cy='70' r='10' stroke='%23333' stroke-width='1' fill='%23ddd'/%3E%3C/svg%3E" alt="Medieval Sword" class="mx-auto h-40">
-                    <h3 class="font-marker text-xl mt-4 text-center">KNIGHTS & CHIVALRY</h3>
-                </div>
-                
-                <div class="comic-panel bg-stone-100 p-4 md:col-span-4">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f8f0e5'/%3E%3Cpath d='M60,40 L140,40 L160,80 L100,180 L40,80 Z' stroke='%23333' stroke-width='3' fill='%23b69b61'/%3E%3Cpath d='M70,80 L130,80 M80,120 L120,120 M90,160 L110,160' stroke='%23333' stroke-width='3' fill='none'/%3E%3Cpath d='M100,40 L100,80' stroke='%23333' stroke-width='3' fill='none'/%3E%3Ccircle cx='70' cy='60' r='8' stroke='%23333' stroke-width='1' fill='%23ddd'/%3E%3Ccircle cx='130' cy='60' r='8' stroke='%23333' stroke-width='1' fill='%23ddd'/%3E%3C/svg%3E" alt="Medieval Castle" class="mx-auto h-40">
-                    <h3 class="font-marker text-xl mt-4 text-center">CASTLES & KINGDOMS</h3>
-                </div>
-                
-                <div class="comic-panel bg-stone-50 p-4 md:col-span-4">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f8f0e5'/%3E%3Cpath d='M60,180 L60,80 L100,40 L140,80 L140,180 Z' stroke='%23333' stroke-width='3' fill='%23b69b61'/%3E%3Cpath d='M80,180 L80,100 L120,100 L120,180 M90,140 L110,140 M100,100 L100,50' stroke='%23333' stroke-width='3' fill='none'/%3E%3Ccircle cx='100' cy='70' r='10' stroke='%23333' stroke-width='1' fill='%23ddd'/%3E%3C/svg%3E" alt="Medieval Church" class="mx-auto h-40">
-                    <h3 class="font-marker text-xl mt-4 text-center">FAITH & RELIGION</h3>
-                </div>
-                
-                <div class="comic-panel bg-stone-100 p-4 md:col-span-12">
-                    <div class="speech-bubble mb-4 max-w-3xl mx-auto">
-                        <p class="font-comic text-lg">"While plague and war devastate the land, art and knowledge are preserved within monastery walls. The seeds of the Renaissance are being planted..."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <div
+                    class="comic-panel bg-indigo-100 p-4 md:col-span-7 aspect-video md:aspect-auto flex items-center justify-center relative">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="800" height="450" fill="#e8e6f7" />
+                            <!-- Concentric circles representing layers of identity -->
+                            <circle cx="400" cy="225" r="200" fill="rgba(255,255,255,0.7)" stroke="#6c63ff"
+                                stroke-width="2" stroke-dasharray="5,5" />
+                            <circle cx="400" cy="225" r="150" fill="rgba(229,229,250,0.7)" stroke="#6c63ff"
+                                stroke-width="2" stroke-dasharray="5,5" />
+                            <circle cx="400" cy="225" r="100" fill="rgba(208,208,245,0.7)" stroke="#6c63ff"
+                                stroke-width="2" stroke-dasharray="5,5" />
+                            <circle cx="400" cy="225" r="50" fill="rgba(180,180,240,0.7)" stroke="#6c63ff"
+                                stroke-width="2" />
 
-        <div class="divider"></div>
-        
-        <!-- Renaissance Section -->
-        <section id="renaissance" class="min-h-screen flex items-center justify-center p-4 md:p-10">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="comic-panel bg-blue-100 p-4 md:col-span-2 aspect-video md:aspect-auto flex items-center justify-center relative">
-                    <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/renaissance/800/500')] bg-cover bg-center"></div>
-                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg">
-                        THE RENAISSANCE - 1500 CE. Art, science, and human potential reborn...
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-blue-50 p-4">
-                    <h2 class="font-marker text-3xl mb-4">REBIRTH OF KNOWLEDGE</h2>
-                    <div class="speech-bubble mt-4">
-                        <p class="font-comic text-lg">"Man is the measure of all things. Through art and science, we shall uncover the secrets of God's creation."</p>
-                        <p class="font-marker text-sm text-right mt-2">- Leonardo da Vinci</p>
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-blue-50 p-4">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 250 250'%3E%3Crect width='250' height='250' fill='%23f8f0e5'/%3E%3Ccircle cx='125' cy='125' r='100' stroke='%23333' stroke-width='1' fill='none' stroke-dasharray='5,5'/%3E%3Crect x='75' y='75' width='100' height='100' stroke='%23333' stroke-width='1' fill='none'/%3E%3Cpath d='M125,25 L125,225 M25,125 L225,125 M25,25 L225,225 M225,25 L25,225' stroke='%23333' stroke-width='1' fill='none' opacity='0.5'/%3E%3Ccircle cx='125' cy='125' r='80' stroke='%23333' stroke-width='1' fill='none'/%3E%3C/svg%3E" alt="Vitruvian Man Sketch" class="mx-auto h-40 mb-4">
-                    <h3 class="font-marker text-xl text-center">ART & PROPORTION</h3>
-                </div>
-                
-                <div class="comic-panel bg-blue-100 p-4 md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div>
-                        <h3 class="font-marker text-xl mb-2">ASTRONOMY</h3>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Ccircle cx='100' cy='75' r='30' stroke='%23333' stroke-width='2' fill='none'/%3E%3Ccircle cx='100' cy='75' r='50' stroke='%23333' stroke-width='1' fill='none'/%3E%3Ccircle cx='100' cy='75' r='70' stroke='%23333' stroke-width='1' fill='none'/%3E%3Ccircle cx='100' cy='75' r='10' stroke='%23333' stroke-width='1' fill='%23FFD700'/%3E%3Ccircle cx='140' cy='75' r='5' stroke='%23333' stroke-width='1' fill='%23B87333'/%3E%3Ccircle cx='65' cy='75' r='4' stroke='%23333' stroke-width='1' fill='%236495ED'/%3E%3Ccircle cx='170' cy='75' r='3' stroke='%23333' stroke-width='1' fill='%23CD5C5C'/%3E%3C/svg%3E" alt="Solar System" class="mt-2 mx-auto">
-                    </div>
-                    <div>
-                        <h3 class="font-marker text-xl mb-2">ARCHITECTURE</h3>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M50,120 L150,120 M60,120 L60,70 A40,40 0 0,1 140,70 L140,120 M80,120 L80,80 M100,120 L100,70 M120,120 L120,80 M60,70 L140,70 M80,50 L120,50 M90,30 L110,30 M100,10 L100,30' stroke='%23333' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="Dome Architecture" class="mt-2 mx-auto">
-                    </div>
-                    <div>
-                        <h3 class="font-marker text-xl mb-2">ANATOMY</h3>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M100,30 C90,30 80,35 80,50 C80,65 90,75 80,90 C70,105 70,120 100,120 C130,120 130,105 120,90 C110,75 120,65 120,50 C120,35 110,30 100,30 Z' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cpath d='M85,50 L115,50 M85,60 L115,60 M100,60 L100,75 M90,75 L110,75 M95,85 L105,85 M100,85 L100,100 M90,100 L110,100' stroke='%23333' stroke-width='1' fill='none'/%3E%3C/svg%3E" alt="Anatomical Drawing" class="mt-2 mx-auto">
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-blue-50 p-4">
-                    <div class="narrator-box text-lg">
-                        Gutenberg's printing press spreads ideas faster than ever before. Perspective in art creates depth. Explorers chart new worlds...
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-blue-100 p-4">
-                    <div class="speech-bubble">
-                        <p class="font-comic text-lg">"The human mind, once stretched by a new idea, never returns to its original dimensions."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <!-- Person in the center -->
+                            <circle cx="400" cy="225" r="30" fill="#f5d5a8" stroke="#333" stroke-width="2" />
+                            <circle cx="390" cy="215" r="3" fill="#333" />
+                            <circle cx="410" cy="215" r="3" fill="#333" />
+                            <path d="M390,235 C395,240 405,240 410,235" stroke="#333" stroke-width="1.5" fill="none" />
 
-        <div class="divider"></div>
-        
-        <!-- Industrial Revolution Section -->
-        <section id="industrial" class="min-h-screen flex items-center justify-center p-4 md:p-10">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="comic-panel bg-gray-200 p-4 md:col-span-3 aspect-video md:aspect-auto flex items-center justify-center relative">
-                    <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/industrial/800/500')] bg-cover bg-center"></div>
-                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg">
-                        THE INDUSTRIAL REVOLUTION - 1800 CE. Steam, steel, and the transformation of society...
+                            <!-- Labels -->
+                            <text x="400" y="175" text-anchor="middle" font-family="Quicksand, sans-serif"
+                                font-size="14" fill="#333">Cá nhân</text>
+                            <text x="400" y="125" text-anchor="middle" font-family="Quicksand, sans-serif"
+                                font-size="14" fill="#333">Gia đình</text>
+                            <text x="400" y="75" text-anchor="middle" font-family="Quicksand, sans-serif" font-size="16"
+                                fill="#333">Dân tộc</text>
+                            <text x="400" y="25" text-anchor="middle" font-family="Quicksand, sans-serif" font-size="18"
+                                font-weight="bold" fill="#333">Nhân loại</text>
+                        </svg>
+                    </div>
+                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg bg-opacity-90 bg-indigo-100">
+                        CHƯƠNG 3: CON NGƯỜI MANG NHIỀU TẦNG BẢN SẮC
                     </div>
                 </div>
-                
-                <div class="comic-panel bg-gray-100 p-4">
-                    <h2 class="font-marker text-3xl mb-4">POWER OF STEAM</h2>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M20,110 L180,110 M30,110 L30,80 L170,80 L170,110 M50,80 L50,60 M60,60 L40,60 M70,80 L70,40 M90,80 L90,40 M110,80 L110,40 M130,80 L130,40 M150,80 L150,60 M160,60 L140,60 M40,110 L50,130 M160,110 L150,130 M50,130 L150,130' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cpath d='M70,40 C70,35 75,30 80,30 L120,30 C125,30 130,35 130,40 M80,30 L80,20 M120,30 L120,20 M75,20 L85,20 M115,20 L125,20 M85,15 C85,10 90,5 100,5 C110,5 115,10 115,15 L115,20 L85,20 L85,15 Z' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cpath d='M90,40 C90,45 95,50 100,50 C105,50 110,45 110,40' stroke='%23333' stroke-width='1' fill='none'/%3E%3C/svg%3E" alt="Steam Engine" class="mx-auto my-4">
-                    <div class="speech-bubble">
-                        <p class="font-comic text-lg">"With the power of steam, we shall remake the world!"</p>
+
+                <div class="comic-panel bg-indigo-50 p-4 md:col-span-5">
+                    <h2 class="font-comic text-3xl mb-4 text-accent-dark">NHỮNG LỚP BẢN SẮC</h2>
+                    <div class="speech-bubble mt-4">
+                        <p class="font-comic text-lg">"Mỗi người là một cá thể riêng biệt, nhưng đồng thời mang trong
+                            mình những đặc tính của cộng đồng, dân tộc và nhân loại."</p>
+                        <p class="font-viet text-sm text-right mt-2">- Nhà nhân học</p>
                     </div>
                 </div>
-                
-                <div class="comic-panel bg-gray-100 p-4 md:col-span-2">
-                    <h2 class="font-marker text-3xl mb-4">FACTORIES & CITIES</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M10,130 L190,130 M30,130 L30,90 L70,90 L70,130 M40,110 L60,110 M40,100 L60,100 M50,90 L50,70 L90,70 L90,130 M60,70 L60,50 L100,50 L100,130 M70,50 L70,30 L110,30 L110,130 M120,130 L120,70 L160,70 L160,130 M130,110 L150,110 M130,90 L150,90 M170,130 L170,90 L150,70 M30,90 L10,70 M50,70 L30,50 M70,50 L50,30 M90,30 L70,10 M110,30 L130,10 M120,70 L100,50 M160,70 L180,50' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cpath d='M80,130 L80,110 L100,110 L100,130 M140,130 L140,120 L150,120 L150,130' stroke='%23333' stroke-width='1' fill='none'/%3E%3C/svg%3E" alt="Factory Skyline" class="mx-auto mb-4">
-                            <p class="font-comic text-sm">Urban centers grow rapidly as workers flock to factories.</p>
-                        </div>
-                        <div>
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f8f0e5'/%3E%3Cpath d='M20,130 L180,130 M40,130 C40,100 60,80 100,80 C140,80 160,100 160,130 M60,130 C60,110 75,100 100,100 C125,100 140,110 140,130 M80,130 C80,120 90,115 100,115 C110,115 120,120 120,130 M100,80 L100,60 M90,60 L110,60 M95,60 L95,40 M105,60 L105,40 M80,40 L120,40 M85,40 L85,30 M115,40 L115,30 M75,30 L125,30' stroke='%23333' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="Train Engine" class="mx-auto mb-4">
-                            <p class="font-comic text-sm">Railways connect cities, transforming transportation and trade.</p>
-                        </div>
-                    </div>
-                    <div class="narrator-box mt-4 text-lg">
-                        As machines replace handcraft, productivity soars—but working conditions worsen. Child labor becomes common, and pollution darkens the skies...
-                    </div>
-                </div>
-                
-                <div class="comic-panel bg-gray-100 p-4">
-                    <h3 class="font-marker text-2xl mb-2">NEW INVENTIONS</h3>
-                    <ul class="font-comic space-y-2 list-disc pl-5">
-                        <li>Steam Engine (1712)</li>
-                        <li>Power Loom (1784)</li>
-                        <li>Telegraph (1837)</li>
-                        <li>Photography (1839)</li>
-                        <li>Telephone (1876)</li>
+
+                <div class="comic-panel bg-indigo-50 p-4 md:col-span-4">
+                    <h3 class="font-comic text-xl mb-4 text-accent-dark">TÍNH CÁ NHÂN</h3>
+                    <ul class="font-viet space-y-1 list-disc pl-5">
+                        <li>Phẩm chất, năng lực riêng</li>
+                        <li>Sở thích, đam mê</li>
+                        <li>Tính cách, quan điểm</li>
+                        <li>Lịch sử cá nhân</li>
                     </ul>
-                </div>
-                
-                <div class="comic-panel bg-gray-100 p-4">
-                    <div class="speech-bubble">
-                        <p class="font-comic text-lg">"We stand at the dawn of a new age. Science and industry will carry mankind to heights never before imagined."</p>
+                    <div class="flex justify-center mt-4">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16">
+                            <circle cx="50" cy="50" r="40" fill="rgba(180,180,240,0.5)" stroke="#6c63ff"
+                                stroke-width="2" />
+                            <path d="M30,50 L70,50 M50,30 L50,70" stroke="#6c63ff" stroke-width="2" />
+                        </svg>
                     </div>
                 </div>
-                
-                <div class="comic-panel bg-gray-200 p-4">
-                    <div class="narrator-box text-lg">
-                        The world is forever changed. Mass production, urbanization, and technological innovation set the stage for the modern world...
+
+                <div class="comic-panel bg-indigo-50 p-4 md:col-span-4">
+                    <h3 class="font-comic text-xl mb-4 text-accent-dark">TÍNH DÂN TỘC</h3>
+                    <ul class="font-viet space-y-1 list-disc pl-5">
+                        <li>Truyền thống văn hóa</li>
+                        <li>Ngôn ngữ, phong tục</li>
+                        <li>Giá trị tinh thần chung</li>
+                        <li>Lịch sử dân tộc</li>
+                    </ul>
+                    <div class="flex justify-center mt-4">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16">
+                            <circle cx="50" cy="50" r="40" fill="rgba(208,208,245,0.5)" stroke="#6c63ff"
+                                stroke-width="2" />
+                            <path d="M30,30 L70,70 M30,70 L70,30" stroke="#6c63ff" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-indigo-50 p-4 md:col-span-4">
+                    <h3 class="font-comic text-xl mb-4 text-accent-dark">TÍNH NHÂN LOẠI</h3>
+                    <ul class="font-viet space-y-1 list-disc pl-5">
+                        <li>Giá trị phổ quát</li>
+                        <li>Mục tiêu chung của nhân loại</li>
+                        <li>Khát vọng tiến bộ</li>
+                        <li>Tình yêu, hòa bình, công lý</li>
+                    </ul>
+                    <div class="flex justify-center mt-4">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16">
+                            <circle cx="50" cy="50" r="40" fill="rgba(229,229,250,0.5)" stroke="#6c63ff"
+                                stroke-width="2" />
+                            <circle cx="50" cy="50" r="20" fill="none" stroke="#6c63ff" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-indigo-100 p-4 md:col-span-12">
+                    <div class="quote-box mx-auto max-w-3xl">
+                        <p class="font-viet text-xl md:text-2xl text-center">"Tính cá nhân, tính dân tộc và tính nhân
+                            loại luôn đan xen và tác động lẫn nhau."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Chapter 4: Mâu thuẫn giữa tính giai cấp và tính nhân loại -->
+        <section id="chapter4" class="min-h-screen flex items-center justify-center p-4 md:p-10">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="comic-panel bg-amber-100 p-4 md:col-span-2 aspect-video md:aspect-auto flex items-center justify-center relative">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="800" height="450" fill="#f5e8b8" />
+
+                            <!-- Revolution scene -->
+                            <path d="M0,300 L800,300" stroke="#333" stroke-width="2" />
+
+                            <!-- Left group - Progressive -->
+                            <circle cx="200" cy="250" r="30" fill="#e67e22" stroke="#333" stroke-width="2" />
+                            <circle cx="190" cy="240" r="3" fill="#333" />
+                            <circle cx="210" cy="240" r="3" fill="#333" />
+                            <path d="M190,260 C195,265 205,265 210,260" stroke="#333" stroke-width="1.5" fill="none" />
+
+                            <circle cx="140" cy="260" r="25" fill="#e67e22" stroke="#333" stroke-width="2" />
+                            <circle cx="130" cy="255" r="3" fill="#333" />
+                            <circle cx="150" cy="255" r="3" fill="#333" />
+                            <path d="M130,270 C135,275 145,275 150,270" stroke="#333" stroke-width="1.5" fill="none" />
+
+                            <circle cx="250" cy="270" r="25" fill="#e67e22" stroke="#333" stroke-width="2" />
+                            <circle cx="240" cy="265" r="3" fill="#333" />
+                            <circle cx="260" cy="265" r="3" fill="#333" />
+                            <path d="M240,280 C245,285 255,285 260,280" stroke="#333" stroke-width="1.5" fill="none" />
+
+                            <!-- Flag -->
+                            <path d="M280,200 L280,300 M280,210 L340,230 L280,250" fill="#e74c3c" stroke="#333"
+                                stroke-width="2" />
+
+                            <!-- Right group - Reactionary -->
+                            <circle cx="600" cy="250" r="30" fill="#34495e" stroke="#333" stroke-width="2" />
+                            <circle cx="590" cy="240" r="3" fill="#eee" />
+                            <circle cx="610" cy="240" r="3" fill="#eee" />
+                            <path d="M590,265 C595,260 605,260 610,265" stroke="#eee" stroke-width="1.5" fill="none" />
+
+                            <circle cx="540" cy="260" r="25" fill="#34495e" stroke="#333" stroke-width="2" />
+                            <circle cx="530" cy="255" r="3" fill="#eee" />
+                            <circle cx="550" cy="255" r="3" fill="#eee" />
+                            <path d="M530,265 C535,260 545,260 550,265" stroke="#eee" stroke-width="1.5" fill="none" />
+
+                            <circle cx="650" cy="270" r="25" fill="#34495e" stroke="#333" stroke-width="2" />
+                            <circle cx="640" cy="265" r="3" fill="#eee" />
+                            <circle cx="660" cy="265" r="3" fill="#eee" />
+                            <path d="M640,275 C645,270 655,270 660,275" stroke="#eee" stroke-width="1.5" fill="none" />
+
+                            <!-- Building in background -->
+                            <path d="M350,150 L450,150 L450,300 L350,300 Z" fill="#bdc3c7" stroke="#333"
+                                stroke-width="2" />
+                            <path d="M370,170 L430,170 L430,200 L370,200 Z" fill="#ecf0f1" stroke="#333"
+                                stroke-width="1" />
+                            <path d="M370,220 L430,220 L430,250 L370,250 Z" fill="#ecf0f1" stroke="#333"
+                                stroke-width="1" />
+                            <path d="M370,270 L410,270 L410,300 L370,300 Z" fill="#7f8c8d" stroke="#333"
+                                stroke-width="1" />
+
+                            <!-- Sun rays -->
+                            <circle cx="700" cy="80" r="40" fill="#f1c40f" stroke="#e67e22" stroke-width="2" />
+                            <path
+                                d="M700,10 L700,30 M770,80 L750,80 M700,150 L700,130 M630,80 L650,80 M645,25 L660,40 M755,25 L740,40 M645,135 L660,120 M755,135 L740,120"
+                                stroke="#e67e22" stroke-width="3" />
+                        </svg>
+                    </div>
+                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg bg-opacity-90 bg-amber-100">
+                        CHƯƠNG 4: MÂU THUẪN GIỮA TÍNH GIAI CẤP VÀ TÍNH NHÂN LOẠI
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-amber-50 p-4">
+                    <h2 class="font-comic text-3xl mb-4 text-accent-dark">XÃ HỘI PHÂN CHIA</h2>
+                    <div class="speech-bubble mt-4">
+                        <p class="font-comic text-lg">"Lịch sử nhân loại là lịch sử đấu tranh giữa các giai cấp, mỗi
+                            giai cấp đều có lợi ích riêng và cách nhìn riêng."</p>
+                        <p class="font-viet text-sm text-right mt-2">- Nhà triết học</p>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-amber-50 p-4">
+                    <h3 class="font-comic text-xl mb-2 text-accent-dark">XUNG ĐỘT LỢI ÍCH</h3>
+                    <div class="grid grid-cols-2 gap-4 font-viet text-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-lg">
+                            <h4 class="font-bold mb-2">GIAI CẤP TIẾN BỘ</h4>
+                            <ul class="text-sm text-left list-disc pl-4">
+                                <li>Thúc đẩy phát triển</li>
+                                <li>Đại diện tương lai</li>
+                                <li>Sáng tạo giá trị mới</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg">
+                            <h4 class="font-bold mb-2">GIAI CẤP PHẢN ĐỘNG</h4>
+                            <ul class="text-sm text-left list-disc pl-4">
+                                <li>Bảo vệ đặc quyền</li>
+                                <li>Duy trì hiện trạng</li>
+                                <li>Chống thay đổi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 font-viet">
+                        <p>Khi lợi ích giai cấp mâu thuẫn với sự phát triển chung, các giá trị nhân loại có thể bị chà
+                            đạp vì lợi ích cục bộ.</p>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-amber-100 p-4 md:col-span-2">
+                    <div class="quote-box mx-auto max-w-2xl">
+                        <p class="font-viet text-xl md:text-2xl text-center">"Có lúc, lợi ích giai cấp đi ngược lại lợi
+                            ích chung của nhân loại."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Chapter 5: Tính nhân loại là vĩnh viễn -->
+        <section id="chapter5" class="min-h-screen flex items-center justify-center p-4 md:p-10">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="comic-panel bg-teal-100 p-4 md:col-span-3 aspect-video md:aspect-auto flex items-center justify-center relative">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="800" height="450" fill="#e0f5f2" />
+
+                            <!-- Utopian cityscape -->
+                            <path d="M0,300 L800,300" stroke="#333" stroke-width="2" />
+
+                            <!-- Green areas -->
+                            <path d="M0,300 C100,260 200,280 300,300" fill="#81ecec" stroke="#00cec9"
+                                stroke-width="1" />
+                            <path d="M500,300 C600,260 700,280 800,300" fill="#81ecec" stroke="#00cec9"
+                                stroke-width="1" />
+
+                            <!-- Futuristic city -->
+                            <path d="M300,150 L350,100 L400,150 L400,300 L300,300 Z" fill="#a29bfe" stroke="#333"
+                                stroke-width="1" fill-opacity="0.5" />
+                            <path
+                                d="M310,160 L390,160 M310,180 L390,180 M310,200 L390,200 M310,220 L390,220 M310,240 L390,240 M310,260 L390,260 M310,280 L390,280"
+                                stroke="#333" stroke-width="1" opacity="0.5" />
+
+                            <path d="M420,180 L450,120 L480,180 L480,300 L420,300 Z" fill="#74b9ff" stroke="#333"
+                                stroke-width="1" fill-opacity="0.5" />
+                            <path
+                                d="M430,190 L470,190 M430,210 L470,210 M430,230 L470,230 M430,250 L470,250 M430,270 L470,270 M430,290 L470,290"
+                                stroke="#333" stroke-width="1" opacity="0.5" />
+
+                            <path d="M500,200 L550,150 L600,200 L600,300 L500,300 Z" fill="#a29bfe" stroke="#333"
+                                stroke-width="1" fill-opacity="0.5" />
+                            <path
+                                d="M510,210 L590,210 M510,230 L590,230 M510,250 L590,250 M510,270 L590,270 M510,290 L590,290"
+                                stroke="#333" stroke-width="1" opacity="0.5" />
+
+                            <!-- People holding hands -->
+                            <circle cx="150" cy="350" r="20" fill="#fdcb6e" stroke="#333" stroke-width="1" />
+                            <circle cx="145" cy="345" r="2" fill="#333" />
+                            <circle cx="155" cy="345" r="2" fill="#333" />
+                            <path d="M145,355 C147,357 153,357 155,355" stroke="#333" stroke-width="1" fill="none" />
+
+                            <circle cx="200" cy="350" r="20" fill="#55efc4" stroke="#333" stroke-width="1" />
+                            <circle cx="195" cy="345" r="2" fill="#333" />
+                            <circle cx="205" cy="345" r="2" fill="#333" />
+                            <path d="M195,355 C197,357 203,357 205,355" stroke="#333" stroke-width="1" fill="none" />
+
+                            <circle cx="250" cy="350" r="20" fill="#74b9ff" stroke="#333" stroke-width="1" />
+                            <circle cx="245" cy="345" r="2" fill="#333" />
+                            <circle cx="255" cy="345" r="2" fill="#333" />
+                            <path d="M245,355 C247,357 253,357 255,355" stroke="#333" stroke-width="1" fill="none" />
+
+                            <circle cx="650" cy="350" r="20" fill="#ff7675" stroke="#333" stroke-width="1" />
+                            <circle cx="645" cy="345" r="2" fill="#333" />
+                            <circle cx="655" cy="345" r="2" fill="#333" />
+                            <path d="M645,355 C647,357 653,357 655,355" stroke="#333" stroke-width="1" fill="none" />
+
+                            <circle cx="700" cy="350" r="20" fill="#a29bfe" stroke="#333" stroke-width="1" />
+                            <circle cx="695" cy="345" r="2" fill="#333" />
+                            <circle cx="705" cy="345" r="2" fill="#333" />
+                            <path d="M695,355 C697,357 703,357 705,355" stroke="#333" stroke-width="1" fill="none" />
+
+                            <!-- Connecting lines (holding hands) -->
+                            <path
+                                d="M170,350 L180,350 M220,350 L230,350 M670,350 L680,350 M270,350 C370,320 530,320 630,350"
+                                stroke="#333" stroke-width="2" fill="none" />
+
+                            <!-- Sun -->
+                            <circle cx="400" cy="80" r="40" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="2" />
+                            <path
+                                d="M400,20 L400,30 M460,80 L450,80 M400,140 L400,130 M340,80 L350,80 M352,32 L360,40 M448,32 L440,40 M352,128 L360,120 M448,128 L440,120"
+                                stroke="#fdcb6e" stroke-width="3" />
+                        </svg>
+                    </div>
+                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg bg-opacity-90 bg-teal-100">
+                        CHƯƠNG 5: TÍNH NHÂN LOẠI LÀ VĨNH VIỄN
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-teal-50 p-4">
+                    <h2 class="font-comic text-3xl mb-4 text-accent-dark">HÒA HỢP & HỢP TÁC</h2>
+                    <div class="speech-bubble mt-4">
+                        <p class="font-comic text-lg">"Khi xã hội tiến đến trạng thái không còn đối kháng giai cấp,
+                            những giá trị nhân văn phổ quát sẽ được đề cao."</p>
+                        <p class="font-viet text-sm text-right mt-2">- Nhà triết học</p>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-teal-50 p-4 md:col-span-2">
+                    <h3 class="font-comic text-xl mb-4 text-accent-dark">GIÁ TRỊ NHÂN VĂN PHỔ QUÁT</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-3 rounded-lg text-center">
+                            <div class="flex justify-center mb-2">
+                                <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+                                    <path
+                                        d="M25,10 C20,10 15,15 15,25 C15,35 20,40 25,40 C30,40 35,35 35,25 C35,15 30,10 25,10 Z"
+                                        fill="#74b9ff" stroke="#0984e3" stroke-width="1" />
+                                    <path d="M20,20 C22,23 28,23 30,20" stroke="#0984e3" stroke-width="1" fill="none" />
+                                </svg>
+                            </div>
+                            <h4 class="font-viet font-bold text-sm">HÒA BÌNH</h4>
+                        </div>
+                        <div class="bg-red-50 p-3 rounded-lg text-center">
+                            <div class="flex justify-center mb-2">
+                                <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+                                    <path d="M15,25 C15,15 35,15 35,25 L25,40 Z" fill="#ff7675" stroke="#d63031"
+                                        stroke-width="1" />
+                                </svg>
+                            </div>
+                            <h4 class="font-viet font-bold text-sm">YÊU THƯƠNG</h4>
+                        </div>
+                        <div class="bg-yellow-50 p-3 rounded-lg text-center">
+                            <div class="flex justify-center mb-2">
+                                <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+                                    <rect x="15" y="15" width="20" height="20" fill="#ffeaa7" stroke="#fdcb6e"
+                                        stroke-width="1" />
+                                    <path d="M15,15 L35,35 M15,35 L35,15" stroke="#fdcb6e" stroke-width="1"
+                                        fill="none" />
+                                </svg>
+                            </div>
+                            <h4 class="font-viet font-bold text-sm">CÔNG BẰNG</h4>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg text-center">
+                            <div class="flex justify-center mb-2">
+                                <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+                                    <circle cx="25" cy="25" r="10" fill="#55efc4" stroke="#00b894" stroke-width="1" />
+                                    <path d="M15,25 L35,25 M25,15 L25,35" stroke="#00b894" stroke-width="1"
+                                        fill="none" />
+                                </svg>
+                            </div>
+                            <h4 class="font-viet font-bold text-sm">PHÁT TRIỂN</h4>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg text-center">
+                            <div class="flex justify-center mb-2">
+                                <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+                                    <path d="M15,35 C15,25 20,15 25,15 C30,15 35,25 35,35" fill="#a29bfe"
+                                        stroke="#6c5ce7" stroke-width="1" />
+                                </svg>
+                            </div>
+                            <h4 class="font-viet font-bold text-sm">SÁNG TẠO</h4>
+                        </div>
+                        <div class="bg-orange-50 p-3 rounded-lg text-center">
+                            <div class="flex justify-center mb-2">
+                                <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+                                    <path d="M15,35 L25,15 L35,35" fill="#fab1a0" stroke="#e17055" stroke-width="1" />
+                                    <path d="M20,25 L30,25" stroke="#e17055" stroke-width="1" fill="none" />
+                                </svg>
+                            </div>
+                            <h4 class="font-viet font-bold text-sm">TỰ DO</h4>
+                        </div>
+                    </div>
+                    <p class="font-viet mt-4 text-center">Những giá trị này tồn tại vượt qua các khác biệt giai cấp, dân
+                        tộc và thời đại.</p>
+                </div>
+
+                <div class="comic-panel bg-teal-100 p-4 md:col-span-3">
+                    <div class="quote-box mx-auto max-w-2xl">
+                        <p class="font-viet text-xl md:text-2xl text-center">"Khi giai cấp không còn, con người vẫn giữ
+                            giá trị nhân văn phổ quát."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Chapter 6: Ý nghĩa phương pháp luận -->
+        <section id="chapter6" class="min-h-screen flex items-center justify-center p-4 md:p-10">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="comic-panel bg-green-100 p-4 md:col-span-2 aspect-video md:aspect-auto flex items-center justify-center relative">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="800" height="450" fill="#e0f5e0" />
+
+                            <!-- Modern workplace scene -->
+                            <rect x="100" y="100" width="600" height="300" rx="5" fill="#f5f5f5" stroke="#333"
+                                stroke-width="2" />
+
+                            <!-- Office desk layout -->
+                            <rect x="120" y="150" width="200" height="100" rx="5" fill="#ecf0f1" stroke="#333"
+                                stroke-width="1" />
+                            <rect x="350" y="150" width="200" height="100" rx="5" fill="#ecf0f1" stroke="#333"
+                                stroke-width="1" />
+                            <rect x="580" y="150" width="100" height="100" rx="5" fill="#ecf0f1" stroke="#333"
+                                stroke-width="1" />
+
+                            <rect x="120" y="280" width="560" height="30" rx="5" fill="#bdc3c7" stroke="#333"
+                                stroke-width="1" />
+                            <rect x="150" y="280" width="80" height="30" rx="5" fill="#27ae60" stroke="#333"
+                                stroke-width="1" />
+                            <rect x="250" y="280" width="80" height="30" rx="5" fill="#3498db" stroke="#333"
+                                stroke-width="1" />
+                            <rect x="350" y="280" width="80" height="30" rx="5" fill="#9b59b6" stroke="#333"
+                                stroke-width="1" />
+                            <rect x="450" y="280" width="80" height="30" rx="5" fill="#e74c3c" stroke="#333"
+                                stroke-width="1" />
+                            <rect x="550" y="280" width="80" height="30" rx="5" fill="#f1c40f" stroke="#333"
+                                stroke-width="1" />
+
+                            <!-- Harmony illustration -->
+                            <circle cx="220" cy="200" r="25" fill="#3498db" stroke="#333" stroke-width="1"
+                                fill-opacity="0.7" />
+                            <circle cx="250" cy="200" r="25" fill="#e74c3c" stroke="#333" stroke-width="1"
+                                fill-opacity="0.7" />
+                            <text x="235" y="205" text-anchor="middle" font-family="Quicksand, sans-serif"
+                                font-size="12" fill="#333">Cá nhân</text>
+
+                            <circle cx="450" cy="200" r="25" fill="#3498db" stroke="#333" stroke-width="1"
+                                fill-opacity="0.7" />
+                            <circle cx="480" cy="200" r="25" fill="#e74c3c" stroke="#333" stroke-width="1"
+                                fill-opacity="0.7" />
+                            <circle cx="465" cy="180" r="25" fill="#f1c40f" stroke="#333" stroke-width="1"
+                                fill-opacity="0.7" />
+                            <text x="465" y="205" text-anchor="middle" font-family="Quicksand, sans-serif"
+                                font-size="12" fill="#333">Hài hòa</text>
+
+                            <!-- People around table -->
+                            <circle cx="630" cy="180" r="15" fill="#f5d5a8" stroke="#333" stroke-width="1" />
+                            <circle cx="625" cy="175" r="2" fill="#333" />
+                            <circle cx="635" cy="175" r="2" fill="#333" />
+                            <path d="M625,185 C627,187 633,187 635,185" stroke="#333" stroke-width="1" fill="none" />
+
+                            <circle cx="630" cy="220" r="15" fill="#f5d5a8" stroke="#333" stroke-width="1" />
+                            <circle cx="625" cy="215" r="2" fill="#333" />
+                            <circle cx="635" cy="215" r="2" fill="#333" />
+                            <path d="M625,225 C627,227 633,227 635,225" stroke="#333" stroke-width="1" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg bg-opacity-90 bg-green-100">
+                        CHƯƠNG 6: Ý NGHĨA PHƯƠNG PHÁP LUẬN
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-green-50 p-4">
+                    <h2 class="font-comic text-3xl mb-4 text-accent-dark">TRONG XÃ HỘI HIỆN ĐẠI</h2>
+                    <div class="speech-bubble mt-4">
+                        <p class="font-comic text-lg">"Xã hội hiện đại cần cân bằng giữa tự do cá nhân và trách nhiệm
+                            cộng đồng. Không có cá nhân nào là một hòn đảo biệt lập."</p>
+                        <p class="font-viet text-sm text-right mt-2">- Nhà xã hội học</p>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-green-50 p-4">
+                    <h3 class="font-comic text-xl mb-2 text-accent-dark">NGUYÊN TẮC CÂN BẰNG</h3>
+                    <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+                        <div class="flex items-center font-viet mb-2">
+                            <div class="w-5 h-5 bg-blue-500 rounded-full mr-2"></div>
+                            <div class="font-bold">QUYỀN CÁ NHÂN</div>
+                        </div>
+                        <ul class="font-viet text-sm list-disc pl-7 mb-4">
+                            <li>Tự do sáng tạo</li>
+                            <li>Quyền tư hữu</li>
+                            <li>Quyền tự quyết</li>
+                        </ul>
+
+                        <div class="flex items-center font-viet mb-2">
+                            <div class="w-5 h-5 bg-red-500 rounded-full mr-2"></div>
+                            <div class="font-bold">TRÁCH NHIỆM XÃ HỘI</div>
+                        </div>
+                        <ul class="font-viet text-sm list-disc pl-7">
+                            <li>Đóng góp cho cộng đồng</li>
+                            <li>Tôn trọng quy tắc chung</li>
+                            <li>Bảo vệ lợi ích chung</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-green-50 p-4 md:col-span-2">
+                    <h3 class="font-comic text-xl mb-4 text-center text-accent-dark">ÁP DỤNG TRONG THỰC TIỄN</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <h4 class="font-viet font-bold mb-2 text-center">TRONG CÔNG VIỆC</h4>
+                            <p class="font-viet text-sm">Phát huy năng lực cá nhân trong khi đồng thời đóng góp vào mục
+                                tiêu chung của tổ chức.</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <h4 class="font-viet font-bold mb-2 text-center">TRONG GIÁO DỤC</h4>
+                            <p class="font-viet text-sm">Nuôi dưỡng tài năng riêng của mỗi người học trong khi dạy họ
+                                giá trị của hợp tác và trách nhiệm xã hội.</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <h4 class="font-viet font-bold mb-2 text-center">TRONG CHÍNH TRỊ</h4>
+                            <p class="font-viet text-sm">Cân bằng quyền lợi của các nhóm xã hội khác nhau để đảm bảo
+                                phát triển hài hòa và bền vững.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-green-100 p-4 md:col-span-2">
+                    <div class="quote-box mx-auto max-w-3xl">
+                        <p class="font-viet text-xl md:text-2xl text-center">"Cần dung hòa giữa tự do cá nhân và lợi ích
+                            xã hội."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Conclusion -->
+        <section id="conclusion" class="min-h-screen flex items-center justify-center p-4 md:p-10">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-6">
+                <div
+                    class="comic-panel bg-blue-100 p-4 aspect-video md:aspect-auto flex items-center justify-center relative">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="800" height="450" fill="#e0e8f5" />
+
+                            <!-- Tree metaphor -->
+                            <!-- Trunk -->
+                            <path d="M350,300 L450,300 L430,200 L370,200 Z" fill="#8b5a2b" stroke="#333"
+                                stroke-width="2" />
+
+                            <!-- Roots (society) -->
+                            <path
+                                d="M350,300 L250,350 M450,300 L550,350 M370,300 L320,380 M430,300 L480,380 M400,300 L400,380"
+                                stroke="#333" stroke-width="3" fill="none" />
+                            <path
+                                d="M250,350 L200,360 M250,350 L230,380 M550,350 L600,360 M550,350 L570,380 M320,380 L300,400 M320,380 L340,400 M480,380 L460,400 M480,380 L500,400 M400,380 L380,400 M400,380 L420,400"
+                                stroke="#333" stroke-width="2" fill="none" />
+
+                            <!-- Branches -->
+                            <path
+                                d="M400,200 L400,150 M400,150 L350,100 M400,150 L450,100 M350,100 L320,50 M350,100 L380,30 M450,100 L420,50 M450,100 L480,30"
+                                stroke="#333" stroke-width="2" fill="none" />
+
+                            <!-- Leaves (individuals) -->
+                            <circle cx="320" cy="50" r="20" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="380" cy="30" r="20" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="420" cy="50" r="20" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="480" cy="30" r="20" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="300" cy="80" r="15" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="350" cy="70" r="15" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="400" cy="80" r="15" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="450" cy="70" r="15" fill="#27ae60" stroke="#333" stroke-width="1" />
+                            <circle cx="500" cy="80" r="15" fill="#27ae60" stroke="#333" stroke-width="1" />
+
+                            <!-- Sun -->
+                            <circle cx="650" cy="80" r="40" fill="#f1c40f" stroke="#e67e22" stroke-width="2" />
+                            <path
+                                d="M650,20 L650,30 M710,80 L700,80 M650,140 L650,130 M590,80 L600,80 M607,37 L614,44 M693,37 L686,44 M607,123 L614,116 M693,123 L686,116"
+                                stroke="#e67e22" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="narrator-box absolute bottom-5 left-5 right-5 text-lg bg-opacity-90 bg-blue-100">
+                        KẾT LUẬN
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-blue-50 p-4">
+                    <h2 class="font-comic text-3xl mb-6 text-center text-accent-dark">QUAN HỆ BIỆN CHỨNG</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h3 class="font-comic text-xl mb-2 text-accent-dark text-center">XÃ HỘI</h3>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <p class="font-viet">Là nền tảng, môi trường, điều kiện cho sự phát triển của cá nhân.
+                                    Như rễ cây nuôi dưỡng thân và lá.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-comic text-xl mb-2 text-accent-dark text-center">CÁ NHÂN</h3>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <p class="font-viet">Là thành tố, động lực, mục tiêu của xã hội. Như lá cây tạo ra dưỡng
+                                    chất nuôi cả cây.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speech-bubble mt-6 max-w-2xl mx-auto">
+                        <p class="font-comic text-lg text-center">"Cá nhân và xã hội không thể tách rời. Mối quan hệ này
+                            tồn tại trong sự vận động biện chứng, phát triển không ngừng theo quy luật lịch sử."</p>
+                    </div>
+                </div>
+
+                <div class="comic-panel bg-blue-100 p-4">
+                    <div class="quote-box mx-auto max-w-3xl">
+                        <p class="font-viet text-xl md:text-2xl text-center">"Cá nhân và xã hội là hai mặt của một chỉnh
+                            thể không thể tách rời."</p>
                     </div>
                 </div>
             </div>
@@ -548,7 +1188,7 @@
 
     <script>
         // Landing page animation and transition
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const landing = document.getElementById('landing');
             const startBtn = document.getElementById('startBtn');
             const soundToggle = document.getElementById('soundToggle');
@@ -557,7 +1197,7 @@
             const soundOff = document.querySelector('.sound-off');
             const themeLight = document.querySelector('.theme-light');
             const themeDark = document.querySelector('.theme-dark');
-            
+
             // Check for dark mode preference
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.documentElement.classList.add('dark');
@@ -571,9 +1211,9 @@
             bgMusic.loop = true;
             bgMusic.volume = 0.2;
             let musicPlaying = false;
-            
+
             // Start button click handler
-            startBtn.addEventListener('click', function() {
+            startBtn.addEventListener('click', function () {
                 landing.style.transition = 'opacity 1s ease';
                 landing.style.opacity = '0';
                 setTimeout(() => {
@@ -582,28 +1222,28 @@
                     animateVisibleSections();
                 }, 1000);
             });
-            
+
             // Sound toggle
-            soundToggle.addEventListener('click', function() {
+            soundToggle.addEventListener('click', function () {
                 if (musicPlaying) {
                     bgMusic.pause();
                     soundOn.classList.add('hidden');
                     soundOff.classList.remove('hidden');
                 } else {
-                    bgMusic.play().catch(e => console.error("Audio playback error:", e));
+                    bgMusic.play().catch(e => console.error("Lỗi phát âm thanh:", e));
                     soundOn.classList.remove('hidden');
                     soundOff.classList.add('hidden');
                 }
                 musicPlaying = !musicPlaying;
             });
-            
+
             // Theme toggle
-            themeToggle.addEventListener('click', function() {
+            themeToggle.addEventListener('click', function () {
                 document.documentElement.classList.toggle('dark');
                 themeLight.classList.toggle('hidden');
                 themeDark.classList.toggle('hidden');
             });
-            
+
             // Dark mode media query listener
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
                 if (event.matches) {
@@ -616,14 +1256,14 @@
                     themeDark.classList.add('hidden');
                 }
             });
-            
+
             // Intersection Observer for animations
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
                 threshold: 0.1
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -631,34 +1271,39 @@
                     }
                 });
             }, observerOptions);
-            
+
             // Observe all sections
             document.querySelectorAll('section').forEach(section => {
                 observer.observe(section);
             });
-            
+
             // Animate panels in a section
             function animateSection(section) {
                 const panels = section.querySelectorAll('.comic-panel');
                 panels.forEach((panel, index) => {
                     setTimeout(() => {
                         panel.classList.add('visible');
-                        
+
                         // Animate speech bubbles and narrator boxes with delay
                         const bubbles = panel.querySelectorAll('.speech-bubble');
                         const narrators = panel.querySelectorAll('.narrator-box');
-                        
+                        const quotes = panel.querySelectorAll('.quote-box');
+
                         bubbles.forEach(bubble => {
                             bubble.classList.add('visible');
                         });
-                        
+
                         narrators.forEach(narrator => {
                             narrator.classList.add('visible');
+                        });
+
+                        quotes.forEach(quote => {
+                            quote.classList.add('visible');
                         });
                     }, index * 200); // Stagger animation
                 });
             }
-            
+
             // Handle initial animations for visible sections
             function animateVisibleSections() {
                 document.querySelectorAll('section').forEach(section => {
@@ -668,28 +1313,28 @@
                     }
                 });
             }
-            
+
             // Update navigation dots
             const scrollContainer = document.querySelector('.scroll-container');
-            const navDots = document.querySelectorAll('.timeline-nav a');
-            
+            const navDots = document.querySelectorAll('.chapter-nav a');
+
             scrollContainer.addEventListener('scroll', () => {
                 const scrollPosition = scrollContainer.scrollTop;
                 document.querySelectorAll('section').forEach((section, index) => {
                     const sectionTop = section.offsetTop;
                     const sectionHeight = section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop - 100 && 
+
+                    if (scrollPosition >= sectionTop - 100 &&
                         scrollPosition < sectionTop + sectionHeight - 100) {
                         navDots.forEach(dot => dot.classList.remove('active'));
                         navDots[index].classList.add('active');
                     }
                 });
             });
-            
+
             // Click handler for navigation dots
             navDots.forEach(dot => {
-                dot.addEventListener('click', function(e) {
+                dot.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
                     const targetSection = document.getElementById(targetId);
@@ -702,4 +1347,5 @@
         });
     </script>
 </body>
+
 </html>
